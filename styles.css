@@ -1,14 +1,14 @@
+@font-face {
+  font-family: 'pacifico';
+  src: url(./fonts/Pacifico-Regular.ttf);
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-div {
-  border: 1px;
-  border-color: red;
-  border-style: solid;
+  font-size: 16px;
 }
 
 .container {
@@ -17,7 +17,7 @@ div {
 }
 
 .visuals {
-  flex-grow: 1.3;
+  flex-grow: 1.5;
   position: relative;
   background-image: url(./imgs/background.jpg);
   background-position: center;
@@ -27,7 +27,22 @@ div {
 .logo {
   position: absolute;
   width: 100%;
-  top: 20%
+  top: 30%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image {
+  padding-right: .5rem;
+}
+
+.logo-text {
+  font-family: 'pacifico';
+  padding-left: .5rem;
+  font-size: 5rem;
 }
 
 .content {
@@ -40,4 +55,18 @@ div {
 .sign-up,
 .bottom {
   flex: auto;
+}
+
+.header,
+.bottom {
+  background-color: rgb(250, 250, 250);
+}
+
+.sign-up {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 1;
+}
+
+span {
+  color: #d86e46;
 }
