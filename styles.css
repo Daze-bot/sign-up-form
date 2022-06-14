@@ -1,6 +1,8 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 div {
@@ -11,12 +13,15 @@ div {
 
 .container {
   display: flex;
-  height: 97vh;
+  height: 100vh;
 }
 
 .visuals {
-  flex-grow: 1.5;
+  flex-grow: 1.3;
   position: relative;
+  background-image: url(./imgs/background.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .logo {
