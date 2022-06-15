@@ -77,10 +77,11 @@ em {
 
 .header p {
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .isolated-text {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .sign-up {
