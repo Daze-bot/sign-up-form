@@ -61,12 +61,12 @@
 .bottom {
   flex: auto;
   height: calc(100vh / 3);
-  padding: 4rem;
+  padding: 2rem 4rem;
 }
 
 .header,
 .bottom {
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(235, 235, 235);
 }
 
 .header p,
@@ -77,11 +77,17 @@ em {
 
 .header p {
   font-weight: 600;
-  margin-bottom: 1rem;
+  display: block;
 }
 
-.isolated-text {
-  margin-top: 2rem;
+.header {
+  overflow: auto;
+}
+
+#isolated-text {
+  font-size: 2rem;
+  margin-top: calc(5vh + 1rem);
+  color: #d86e46;
 }
 
 .sign-up {
