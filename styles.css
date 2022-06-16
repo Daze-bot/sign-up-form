@@ -96,6 +96,16 @@ em {
   z-index: 1;
 }
 
+.forms {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+input,
+label {
+  display: block;
+}
+
 span {
   color: #d86e46;
 }
