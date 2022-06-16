@@ -27,7 +27,7 @@
       </div>
       <div class="sign-up">
         <p>Let's do this!</p>
-        <div class="forms">
+        <form action="" method="post" class="forms">
           <div class="input">
             <label for="first_name">FIRST NAME</label>
             <input type="text" id="first_name" name="firstName">
@@ -52,10 +52,11 @@
             <label for="confirm_password">CONFIRM PASSWORD</label>
             <input type="password" id="confirm_password" name="confirmPassword">
           </div>
-        </div>
+          <button type="submit" class="hidden" id="hiddenBtn"></button>
+        </form>
       </div>
       <div class="bottom">
-        <button type="submit">Create Account</button>
+        <button type="button" class="submitButton">Create Account</button>
         <p>Already have an account? <span>Log In</span></p>
       </div>
     </div>
