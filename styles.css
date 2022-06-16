@@ -96,6 +96,12 @@ em {
   z-index: 1;
 }
 
+.sign-up p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #d86e46;
+}
+
 .forms {
   display: flex;
   flex-wrap: wrap;
@@ -104,8 +110,36 @@ em {
 input,
 label {
   display: block;
+  width: 100%;
+}
+
+label {
+  font-size: .8rem;
+}
+
+.input {
+  width: 50%;
+  padding-top: 2vh;
+  padding-right: 5vw;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  padding: 16px 64px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: #d86e46;
+  color: white;
+}
+
+.bottom p,
+span {
+  font-size: 1.3rem;
 }
 
 span {
   color: #d86e46;
+  font-weight: 900;
 }
