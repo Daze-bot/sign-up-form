@@ -29,15 +29,15 @@
         <p>Let's do this!</p>
         <form action="" method="post" class="forms" autocomplete="off">
           <div class="input">
-            <label for="first_name">FIRST NAME *</label>
+            <label for="first_name">FIRST NAME <span class="red">*</span></label>
             <input type="text" id="first_name" name="firstName" required>
           </div>
           <div class="input">
-            <label for="last_name">LAST NAME *</label>
+            <label for="last_name">LAST NAME <span class="red">*</span></label>
             <input type="text" id="last_name" name="lastName" required>
           </div>
           <div class="input">
-            <label for="user_email">EMAIL *</label>
+            <label for="user_email">EMAIL <span class="red">*</span></label>
             <input type="email" id="user_email" name="email" required>
           </div>
           <div class="input">
@@ -46,20 +46,22 @@
                 pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$">
           </div>
           <div class="input">
-            <label for="user_password">PASSWORD *</label>
+            <label for="user_password">PASSWORD <span id="pword" class="red">*</span></label>
             <input type="password" id="user_password" name="password" required    
-                placeholder="Must be minimum 8 characters" minlength="8">
+                minlength="8">
+            <p id="passwordReq" class="hidden">*Minimum 8 characters</p>
           </div>
           <div class="input">
-            <label for="confirm_password">CONFIRM PASSWORD *</label>
+            <label for="confirm_password">CONFIRM PASSWORD <span class="red">*</span></label>
             <input type="password" id="confirm_password" name="confirmPassword" required>
+            <p id="confirmPass" class="hidden">*Passwords must match</p>
           </div>
           <button type="submit" class="hidden" id="hiddenBtn"></button>
         </form>
       </div>
       <div class="bottom">
         <button type="button" class="submitButton">Create Account</button>
-        <p>Already have an account? <span>Log In</span></p>
+        <p>Already have an account? <span class="orange">Log In</span></p>
       </div>
     </div>
   </div>

@@ -102,6 +102,10 @@ em {
   color: #d86e46;
 }
 
+.red {
+  color: red;
+}
+
 .forms {
   display: flex;
   flex-wrap: wrap;
@@ -174,6 +178,14 @@ input:valid {
   padding-right: 5vw;
 }
 
+#passwordReq,
+#confirmPass {
+  font-size: .8rem;
+  letter-spacing: 0;
+  color: red;
+  font-weight: 300;
+}
+
 button {
   border: none;
   border-radius: 8px;
@@ -186,17 +198,17 @@ button {
 }
 
 .bottom p,
-span {
+.orange {
   font-size: 1.3rem;
 }
 
-span {
+.orange {
   color: #d86e46;
   font-weight: 900;
   cursor: pointer;
 }
 
-span:hover {
+.orange:hover {
   color: #cc4d00;
 }
 
