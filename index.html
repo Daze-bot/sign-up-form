@@ -29,28 +29,30 @@
         <p>Let's do this!</p>
         <form action="" method="post" class="forms">
           <div class="input">
-            <label for="first_name">FIRST NAME</label>
-            <input type="text" id="first_name" name="firstName">
+            <label for="first_name">FIRST NAME *</label>
+            <input type="text" id="first_name" name="firstName" required>
           </div>
           <div class="input">
-            <label for="last_name">LAST NAME</label>
-            <input type="text" id="last_name" name="lastName">
+            <label for="last_name">LAST NAME *</label>
+            <input type="text" id="last_name" name="lastName" required>
           </div>
           <div class="input">
-            <label for="user_email">EMAIL</label>
-            <input type="email" id="user_email" name="email">
+            <label for="user_email">EMAIL *</label>
+            <input type="email" id="user_email" name="email" required>
           </div>
           <div class="input">
             <label for="user_phone">PHONE NUMBER</label>
-            <input type="tel" id="user_phone" name="phone">
+            <input type="tel" id="user_phone" name="phone" 
+                pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$">
           </div>
           <div class="input">
-            <label for="user_password">PASSWORD</label>
-            <input type="password" id="user_password" name="password">
+            <label for="user_password">PASSWORD *</label>
+            <input type="password" id="user_password" name="password" required    
+                placeholder="Must be minimum 8 characters" minlength="8">
           </div>
           <div class="input">
-            <label for="confirm_password">CONFIRM PASSWORD</label>
-            <input type="password" id="confirm_password" name="confirmPassword">
+            <label for="confirm_password">CONFIRM PASSWORD *</label>
+            <input type="password" id="confirm_password" name="confirmPassword" required>
           </div>
           <button type="submit" class="hidden" id="hiddenBtn"></button>
         </form>
