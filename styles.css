@@ -54,6 +54,8 @@
   display: flex;
   flex-direction: column;
   width: 60vw;
+  padding-top: calc(2 * 2vh);
+  background-color: rgb(235, 235, 235);
 }
 
 .header,

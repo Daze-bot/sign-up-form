@@ -4,12 +4,9 @@ let passwordInput = document.querySelector('#user_password')
 let passwordReq = document.querySelector('#passwordReq');
 let confirmInput = document.querySelector('#confirm_password');
 let confirmReq = document.querySelector('#confirmPass');
-const phoneRegEx = "^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$";
-let phoneNumber = document.querySelector('#user_phone');
+let inputFields = document.querySelectorAll('input');
 
 submitBtn.addEventListener('click', submitBtnClick);
-
-let inputFields = document.querySelectorAll('input');
 
 /* Don't show invalid input border when input is blank */
 inputFields.forEach(input => {
@@ -23,6 +20,16 @@ inputFields.forEach(input => {
 
 /* Don't show password requirements until focused for the first time */
 passwordInput.addEventListener('focus', () => {
+  let passwordStr = passwordInput.value;
+  if (passwordStr.length >= 8) {
+    passwordReq.classList.add('hidden');
+  } else {
+    passwordReq.classList.remove('hidden');
+  }
+})
+
+/* Hide the password requirements when valid */
+passwordInput.addEventListener('input', () => {
   let passwordStr = passwordInput.value;
   if (passwordStr.length >= 8) {
     passwordReq.classList.add('hidden');
@@ -45,30 +52,10 @@ submitBtn.addEventListener('click', () => {
   }
 })
 
-/* Hide the password requirements when valid */
-passwordInput.addEventListener('input', () => {
-  let passwordStr = passwordInput.value;
-  if (passwordStr.length >= 8) {
-    passwordReq.classList.add('hidden');
-  } else {
-    passwordReq.classList.remove('hidden');
-  }
-})
-
-/* Compare password inputs on every input in either password */
+/* Compare password inputs on every input in either password for confirmation
+of matching passwords*/
 passwordInput.addEventListener('input', checkPasswords);
 confirmInput.addEventListener('input', checkPasswords);
-
-/* Custon validation for phone number input */
-submitBtn.addEventListener('click', () => {
-  if (phoneNumber.value == phoneRegEx) {
-    phoneNumber.setCustomValidity('');
-    phoneNumber.addEventListener('input', validatePhone);
-  } else {
-    phoneNumber.setCustomValidity('Please enter a valid phone number');
-    phoneNumber.addEventListener('input', validatePhone);
-  }
-})
 
 function submitBtnClick() {
   hiddenBtn.click();
@@ -94,15 +81,5 @@ function validatePassword() {
     passwordInput.setCustomValidity('Please enter a password');
   } else if (passwordInput.value.length >= 8) {
     passwordInput.setCustomValidity('');
-  }
-}
-
-function validatePhone() {
-  if (phoneNumber.value == phoneRegEx) {
-    phoneNumber.setCustomValidity('');
-  } else if (phoneNumber.value.length === 0) {
-    phoneNumber.setCustomValidity('');
-  } else {
-    phoneNumber.setCustomValidity('Please enter a valid phone number');
   }
 }
