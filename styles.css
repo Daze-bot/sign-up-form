@@ -143,6 +143,10 @@ input:invalid {
   border-style: solid;
   border-color: rgb(202, 12, 12);
   border-radius: 2px;
+  background: url(./imgs/invalid.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 input:valid {
@@ -161,6 +165,7 @@ input:valid {
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.2);
   border-radius: 2px;
+  background: none;
 }
 
 .input {
