@@ -57,6 +57,7 @@ of matching passwords*/
 passwordInput.addEventListener('input', checkPasswords);
 confirmInput.addEventListener('input', checkPasswords);
 
+/* Click on hidden form submission */
 function submitBtnClick() {
   hiddenBtn.click();
   inputFields.forEach(input => {
