@@ -202,8 +202,10 @@ span:hover {
 .submitButton:hover {
   cursor: pointer;
   background-color: #cc4d00;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2), 0 4px 20px rgba(0, 0, 0, 0.19);
 }
 
 .submitButton:active {
+  box-shadow: none;
   transform: translateY(2px);
 }

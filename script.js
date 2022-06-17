@@ -4,7 +4,6 @@ let hiddenBtn = document.querySelector('#hiddenBtn');
 submitBtn.addEventListener('click', submitBtnClick);
 
 let inputFields = document.querySelectorAll('input');
-let nameInput = document.querySelector('#first_name');
 
 inputFields.forEach(input => {
   if (input.value === "") {
