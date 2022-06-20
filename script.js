@@ -52,12 +52,11 @@ submitBtn.addEventListener('click', () => {
   }
 })
 
-/* Compare password inputs on every input in either password for confirmation
-of matching passwords*/
+/* Compare passwords on every password input*/
 passwordInput.addEventListener('input', checkPasswords);
 confirmInput.addEventListener('input', checkPasswords);
 
-/* Click on hidden form submission */
+/* Submit form when clicking on 'Create Account' button*/
 function submitBtnClick() {
   hiddenBtn.click();
   inputFields.forEach(input => {
